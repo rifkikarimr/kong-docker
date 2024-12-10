@@ -62,16 +62,26 @@ You can create a `.env` file in the root of the repository to set these variable
 Manages the routing of API requests and applies transformations as defined in the configuration
 
 ### PostgreSQL Database
-Acts as the datastore for Kong to persists configurations.
+Acts as the datastore for Kong to persist configurations.
 
 ### Konga
 Provides a GUI for managing Kong configurations.
 
 
 ## Configuration Details
-The file `example-kong-deck.yml` defines two primary services with rotes:
+The file `example-kong-deck.yml` defines two primary services with routes:
 1. **Transactions_API_of_BanKonG
    - Routes for transaction-related APIs (GET, POST, PATCH, DELETE).
 2. Mockbin_API_of_BanKonG
    - A route to test and debug APIs with an echo service.
-   
+
+### Environment Variables in Deck Configuration
+Deck configuration leverages environment variables for flexibility. Ensure the `DECK_FQDN` variable is set before applying the configuration.
+
+## Cleanup
+To stop and remove the services:
+`docker-compose down -v`
+
+## Troubleshooting
+- **Database Connection Issues: Ensure the `POSTGRES_PASSWORD`, `POSTGRES_USER`, and `POSTGRES_DB` are consistent between the `docker-compose.yaml` and your `.env` file.**
+- **Deck Sync Errors: Verify the `KONG_ADMIN_LISTEN` and `DECK_FQDN` values in your setup.**
