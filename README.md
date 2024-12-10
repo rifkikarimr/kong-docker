@@ -70,9 +70,9 @@ Provides a GUI for managing Kong configurations.
 
 ## Configuration Details
 The file `example-kong-deck.yml` defines two primary services with routes:
-1. **Transactions_API_of_BanKonG
+1. **Transactions_API_of_BanKonG**
    - Routes for transaction-related APIs (GET, POST, PATCH, DELETE).
-2. Mockbin_API_of_BanKonG
+2. **Mockbin_API_of_BanKonG**
    - A route to test and debug APIs with an echo service.
 
 ### Environment Variables in Deck Configuration
