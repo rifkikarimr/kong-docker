@@ -45,7 +45,7 @@ You can create a `.env` file in the root of the repository to set these variable
 
 3. Verify the services are running:
    - Kong Admin: http://localhost:8001
-   - Kong Proxy: http:///localhost:8800
+   - Kong Proxy: http://localhost:8800
    - Kong GUI: http://localhost:1337
   
 ### Step 2: Apply Configuration Using Deck
